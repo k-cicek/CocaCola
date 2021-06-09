@@ -4,9 +4,73 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Cocacola Website Landing Page</title>
 </head>
 <body>
-    
+   <section>
+    <div class="circle"></div>
+    <header>
+      <a href="#"><img src="images/logo.png" class="logo"></a>
+      <div class="toggle" onclick="toggleMenu ()"></div>
+      <ul class="navigation">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">What's New</a></li>
+          <li><a href="#">Contact</a></li>
+      </ul>
+  </header>
+  <div class="content">
+    <div class="textBox">
+        <h2>Taste the Feeling</h2>
+        <p>“Taste the Feeling” brings to life the idea that drinking a Coca‑Cola – any Coca‑Cola – is a simple pleasure that makes everyday moments more special. While our award-winning “Open Happiness” campaign leaned heavily on what the brand stands for over the last seven years, “Taste the Feeling” employs universal storytelling with the product at the heart to reflect both the functional and emotional aspects of the Coca‑Cola experience.</p>
+        <a href="#">Learn More</a>
+    </div>
+
+    <div class="imgBox">
+      <div class="swiper-container swp">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img class="product-img" src="images/cocacola1.png"></div>
+            <div class="swiper-slide"><img class="product-img" src="images/cocacola2.png"></div>
+            <div class="swiper-slide"><img class="product-img" src="images/cocacola3.png"></div>
+            <div class="swiper-slide"><img class="product-img" src="images/cocacola4.png"></div>
+            <div class="swiper-slide"><img class="product-img" src="images/cocacola5.png"></div>
+            <div class="swiper-slide"><img class="product-img" src="images/cocacola6.png"></div>
+          </div>
+        </div>
+    </div>
+
+  </div>
+  <ul class="sci">
+    <li><a href="https://www.facebook.com/kevser.cicek.7186"><img src="images/facebook.png"></a></li>
+    <li><a href="#"><img src="images/twitter.png"></a></li>
+    <li><a href="https://www.instagram.com/kevserrcicek/"><img src="images/instagram.png"></a></li>
+  </ul> 
+   </section>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>  
+    <script>
+      var swiper = new Swiper(".swp", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 0,
+          depth: 200,
+          modifier: 1,
+          slideShadows: true,
+        },
+        loop: true,
+      });
+
+      function toggleMenu (){
+        const menuToggle = document.querySelector('.toggle');
+        const navigation = document.querySelector('.navigation')
+        menuToggle.classList.toggle('active')
+        navigation.classList.toggle('active')
+      }
+    </script>
 </body>
 </html>
