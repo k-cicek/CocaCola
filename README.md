@@ -2,4 +2,4 @@
 
 
 
-![](images/coca-cola.png)
+![](public/images/coca-cola.png)
